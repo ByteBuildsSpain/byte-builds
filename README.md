@@ -1,5 +1,4 @@
-# byte-builds
-Premium custom-built gaming, streaming, editing and work PCs for Spain (Marbella/Costa del # Byte Builds
+# Byte Builds
 
 A premium custom PC builder website for Spain, designed around the Byte Builds brief.
 
@@ -18,14 +17,20 @@ A premium custom PC builder website for Spain, designed around the Byte Builds b
 - Easy pricing data updates via JS objects
 
 ## Notes
-- Update the WhatsApp number in script.js:
-  - const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";
+- Update the WhatsApp number in `script.js`:
+  - `const WHATSAPP_NUMBER = "YOUR_WHATSAPP_NUMBER";`
 - All component pricing and build data are easy to edit in the JS objects.
 
 ## Local preview
-Open index.html directly in a browser, or serve it with a local HTTP server such as:
+Open `index.html` directly in a browser, or serve it with a local HTTP server such as:
 
+```bash
 python -m http.server 8000
+```
 
 Then visit:
+
+```text
 http://localhost:8000
+```
+

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Byte Builds creates premium custom gaming, streaming, editing and work PCs for customers in Spain, including Marbella and Costa del Sol."
+    />
+    <title>Byte Builds | Custom PC Builder</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a href="#top" class="brand" aria-label="Byte Builds home">
+          <span class="brand-mark">B</span>
+          <span class="brand-text">BYTE BUILDS</span>
+        </a>
+
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#builds">Builds</a>
+          <a href="#configure">Configure</a>
+          <a href="#how-it-works">How It Works</a>
+          <a href="#faq">FAQ</a>
+          <a href="#configure" class="nav-cta">Build Yours</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="#configure" class="btn btn-primary btn-small">Build Yours</a>
+          <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Custom PCs for Spain</p>
+            <h1>Built for the way you play.</h1>
+            <p class="subhead">
+              High-performance PCs, built around what you actually need. Choose a
+              ready-to-go Byte Build or configure your own from the ground up.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#builds" class="btn btn-primary">Explore Builds <span>→</span></a>
+              <a href="#configure" class="btn btn-secondary">Configure a PC</a>
+            </div>
+
+            <p class="hero-meta">
+              Intel-powered prebuilts · NVIDIA RTX graphics · Built in Spain
+            </p>
+          </div>
+
+          <div class="hero-visual" aria-label="Featured custom PC illustration">
+            <div class="floating-card card-top">
+              <span class="label">Featured</span>
+              <strong>Byte Gaming</strong>
+              <small>Intel Core i7 · RTX 5060 Ti · 16GB DDR5</small>
+            </div>
+
+            <div class="pc-case">
+              <div class="case-glow"></div>
+              <div class="pc-window">
+                <div class="gpu"></div>
+                <div class="motherboard"></div>
+                <div class="fan fan-1"></div>
+                <div class="fan fan-2"></div>
+                <div class="fan fan-3"></div>
+              </div>
+            </div>
+
+            <div class="floating-card card-bottom">
+              <span class="price">€1,499</span>
+              <small>Most popular</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="builds" class="builds">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">Byte Builds</p>
+            <h2>High-performance systems, ready to go.</h2>
+          </div>
+
+          <div id="build-grid" class="build-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="configure" class="configurator">
+        <div class="container">
+          <div class="section-header align-left">
+            <p class="eyebrow">Custom configurator</p>
+            <h2>Build your ideal setup.</h2>
+          </div>
+
+          <div class="configurator-grid">
+            <div class="config-panel">
+              <div class="field-group">
+                <label for="useCase">What are you using this PC for?</label>
+                <select id="useCase">
+                  <option value="Gaming">Gaming</option>
+                  <option value="Gaming + Streaming">Gaming + Streaming</option>
+                  <option value="Video Editing">Video Editing</option>
+                  <option value="Work">Work</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="field-group">
+                <label for="budget">Budget</label>
+                <div class="budget-wrap">
+                  <span>€</span>
+                  <input id="budget" type="number" min="800" max="5000" step="50" value="2000" />
+                </div>
+              </div>
+
+              <div class="options-stack">
+                <div class="option-block">
+                  <h3>CPU</h3>
+                  <div id="cpu-options" class="option-list" role="radiogroup" aria-label="CPU options"></div>
+                </div>
+
+                <div class="option-block">
+                  <h3>GPU</h3>
+                  <div id="gpu-options" class="option-list" role="radiogroup" aria-label="GPU options"></div>
+                </div>
+
+                <div class="option-block">
+                  <h3>RAM</h3>
+                  <div id="ram-options" class="option-list" role="radiogroup" aria-label="RAM options"></div>
+                </div>
+
+                <div class="option-block">
+                  <h3>Storage</h3>
+                  <div id="storage-options" class="option-list" role="radiogroup" aria-label="Storage options"></div>
+                </div>
+
+                <div class="option-block">
+                  <h3>Cooling</h3>
+                  <div id="cooling-options" class="option-list" role="radiogroup" aria-label="Cooling options"></div>
+                </div>
+
+                <div class="option-block">
+                  <h3>PSU</h3>
+                  <div id="psu-options" class="option-list" role="radiogroup" aria-label="PSU options"></div>
+                </div>
+
+                <div class="option-block">
+                  <h3>Case</h3>
+                  <div id="case-options" class="option-list" role="radiogroup" aria-label="Case options"></div>
+                </div>
+
+                <div class="option-block">
+                  <h3>Additional options</h3>
+                  <div class="toggle-list">
+                    <label class="toggle-row">
+                      <input id="wifi-option" type="checkbox" checked />
+                      <span>Wi‑Fi + Bluetooth</span>
+                    </label>
+
+                    <label class="toggle-row">
+                      <input id="windows-option" type="checkbox" checked />
+                      <span>Windows 11</span>
+                    </label>
+
+                    <label class="toggle-row">
+                      <input id="rgb-option" type="checkbox" checked />
+                      <span>RGB lighting</span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <aside class="summary-panel">
+              <p class="summary-label">Estimated build</p>
+              <h3 id="estimated-price">€0</h3>
+
+              <div id="recommendation-box" class="recommendation-box">
+                <strong id="recommendation-title">Recommended for Gaming</strong>
+                <p id="recommendation-text">
+                  Balanced performance with strong GPU value and smooth gameplay.
+                </p>
+              </div>
+
+              <ul id="summary-list" class="summary-list"></ul>
+
+              <div class="summary-actions">
+                <button id="request-build-btn" type="button" class="btn btn-primary wide">
+                  Request This Build
+                </button>
+                <div class="whatsapp-row">
+                  <a id="whatsapp-link" href="#" class="whatsapp-link" target="_blank" rel="noreferrer">
+                    WhatsApp Us
+                  </a>
+                </div>
+              </div>
+
+              <p class="pricing-note">
+                Prices shown on the website are estimates and may change depending on component availability and supplier pricing. Exact components and final pricing are confirmed before ordering.
+              </p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section id="how-it-works" class="steps">
+        <div class="container">
+          <div class="section-header">
+            <p class="eyebrow">How it works</p>
+            <h2>Simple from start to finish.</h2>
+          </div>
+
+          <div class="steps-grid">
+            <article class="step-card">
+              <span class="step-number">01</span>
+              <h3>Choose</h3>
+              <p>Pick a Byte Build or configure the exact PC you want.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">02</span>
+              <h3>Confirm</h3>
+              <p>Send your requirements. We check availability and confirm the final quote.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">03</span>
+              <h3>Build</h3>
+              <p>Your PC is assembled, tested and prepared before collection or delivery arrangements.</p>
+            </article>
+
+            <article class="step-card">
+              <span class="step-number">04</span>
+              <h3>Play</h3>
+              <p>Switch it on and get straight into what you bought it for.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="faq" class="faq">
+        <div class="container narrow">
+          <div class="section-header">
+            <p class="eyebrow">FAQ</p>
+            <h2>Everything you need to know.</h2>
+          </div>
+
+          <div class="faq-list">
+            <details open>
+              <summary>Can I request a completely custom PC?</summary>
+              <p>Yes. The configurator is a starting point and customers can request specific components or requirements.</p>
+            </details>
+
+            <details>
+              <summary>Are the prebuilt PCs Intel only?</summary>
+              <p>Yes. The Byte Builds prebuilt range uses Intel CPUs.</p>
+            </details>
+
+            <details>
+              <summary>Are the prices final?</summary>
+              <p>No. Prices are estimates only. Final pricing depends on component availability and supplier pricing.</p>
+            </details>
+
+            <details>
+              <summary>Do you sell in Spain?</summary>
+              <p>Yes. The website is designed for customers in Spain and all pricing is shown in euros.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div>
+          <a href="#top" class="brand footer-brand">
+            <span class="brand-mark">B</span>
+            <span class="brand-text">BYTE BUILDS</span>
+          </a>
+          <p>Premium custom gaming, streaming, editing and work PCs built for Spain.</p>
+        </div>
+
+        <div>
+          <h3>Navigation</h3>
+          <ul>
+            <li><a href="#builds">Builds</a></li>
+            <li><a href="#configure">Configure</a></li>
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#faq">FAQ</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h3>Location</h3>
+          <ul>
+            <li>Marbella</li>
+            <li>San Pedro</li>
+            <li>Costa del Sol</li>
+            <li>Spain</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>© 2026 Byte Builds. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <div id="request-modal" class="modal hidden" aria-hidden="true">
+      <div class="modal-backdrop" data-close="true"></div>
+
+      <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button type="button" class="modal-close" aria-label="Close form">×</button>
+        <h3 id="modal-title">Request This Build</h3>
+
+        <form id="build-request-form">
+          <div class="form-grid">
+            <label>
+              Name
+              <input type="text" name="name" required />
+            </label>
+
+            <label>
+              Email
+              <input type="email" name="email" required />
+            </label>
+
+            <label>
+              WhatsApp / phone
+              <input type="tel" name="phone" />
+            </label>
+
+            <label>
+              Intended use
+              <select name="use">
+                <option value="Gaming">Gaming</option>
+                <option value="Gaming + Streaming">Gaming + Streaming</option>
+                <option value="Video Editing">Video Editing</option>
+                <option value="Work">Work</option>
+                <option value="Other">Other</option>
+              </select>
+            </label>
+
+            <label>
+              Games
+              <input type="text" name="games" placeholder="e.g. Fortnite, Warzone, GTA V" />
+            </label>
+
+            <label>
+              Software
+              <input type="text" name="software" placeholder="e.g. Adobe Premiere Pro, Blender" />
+            </label>
+
+            <label class="full-width">
+              Notes
+              <textarea name="notes" rows="4" placeholder="Any specific requirements, preferences or performance goals"></textarea>
+            </label>
+
+            <label>
+              Budget
+              <input type="text" name="budget" id="form-budget" />
+            </label>
+
+            <label>
+              Preferred CPU
+              <input type="text" name="preferredCpu" />
+            </label>
+
+            <label>
+              Preferred GPU
+              <input type="text" name="preferredGpu" />
+            </label>
+          </div>
+
+          <div id="build-summary" class="request-summary"></div>
+
+          <button type="submit" class="btn btn-primary wide">Send Enquiry</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
